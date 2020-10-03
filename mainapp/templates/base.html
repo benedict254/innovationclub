@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		.carousel {
+		  height: 60vh;
+		}
+
+		@media (max-width: 740px) {
+
+
+		  .carousel {
+			height: 100vh;
+		  }
+		}
+
+		@media (min-width: 800px) and (max-width: 850px) {
+
+
+		  .carousel {
+			height: 100vh;
+		  }
+		}
+
+	  /* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
+	  html,
+	  body,
+	  .view {
+	  height: 100%; }
+
+	  /* Half Page Carousel itself*/
+	  .carousel {
+	  height: 50%; }
+	  .carousel .carousel-inner {
+		height: 100%; }
+		.carousel .carousel-inner .carousel-item,
+		.carousel .carousel-inner .active {
+		  height: 100%; }
+
+	  /* Adjustment for mobile devices*/
+	  @media (max-width: 776px) {
+	  .carousel {
+		height: 100%; } }
+
+	  /* Footer color for sake of consistency with Navbar */
+
+	  </style>
+</head>
+<body>
+	{% block content %}{% endblock %}
+</body>
+</html>
